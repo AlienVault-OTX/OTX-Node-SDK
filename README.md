@@ -18,11 +18,11 @@ OTX-Node-SDK will soon be added to npm. Until then follow the instructions below
 1. Register at https://otx.alienvault.com/ and obtain your DirectConnect OTX Key found on https://otx.alienvault.com/api/
 2. clone this repo
 3. Require 'otx-node-sdk/index.js' in your file
-```javascript 
+``` 
 var otxNodeSdk = require('otx-node-sdk/index.js'); 
 ```
 4. Initialize with your OTX API KEY
-```javascript 
+``` 
 var otxapi = new otxNodeSdk('<OTX_API_KEY>'); 
 ```
 5. Have Fun!
@@ -35,43 +35,43 @@ All functions require a callback.
 Refer to https://otx.alienvault.com/api/ API Docs for parameter options and response examples.
 
 - IPv4
-```javascript otxapi.indicators.ipv4( ipv4, section, callback ); ```
+``` otxapi.indicators.ipv4( ipv4, section, callback ); ```
 -- *ipv4*: string *required*
 -- *section*: string *required*
 -- *callback*: function (error, response) *required*
 
 - IPv6
-```javascript otxapi.indicators.ipv6( ipv6, section, callback ); ```
+``` otxapi.indicators.ipv6( ipv6, section, callback ); ```
 -- *ipv6*: string *required*
 -- *section*: string *required*
 -- *callback*: function (error, response) *required*
 
 - Domain
-```javascript otxapi.indicators.domain( domain, section, callback ); ```
+``` otxapi.indicators.domain( domain, section, callback ); ```
 -- *domain*: string *required*
 -- *section*: string *required*
 -- *callback*: function (error, response) *required*
 
 - Hostname
-```javascript otxapi.indicators.hostname( hostname, section, callback ); ```
+``` otxapi.indicators.hostname( hostname, section, callback ); ```
 -- *hostname*: string *required*
 -- *section*: string *required*
 -- *callback*: function (error, response) *required*
 
 - File
-```javascript otxapi.indicators.file( file, section, callback ); ```
+``` otxapi.indicators.file( file, section, callback ); ```
 -- *file*: string *required*
 -- *section*: string *required*
 -- *callback*: function (error, response) *required*
 
 - URL
-```javascript otxapi.indicators.url( url, section, callback ); ```
+``` otxapi.indicators.url( url, section, callback ); ```
 -- *url*: string *required*
 -- *section*: string *required*
 -- *callback*: function (error, response) *required*
 
 - CVE
-```javascript otxapi.indicators.cve( cve, section, callback ); ```
+``` otxapi.indicators.cve( cve, section, callback ); ```
 -- *cve*: string *required*
 -- *section*: string *required*
 -- *callback*: function (error, response) *required*
@@ -81,14 +81,14 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 Refer to https://otx.alienvault.com/api/ API Docs for parameter options and response examples.
 
 - Activity
-```javascript otxapi.pulses.activity( modified_since, limit, page, callback ); ```
+``` otxapi.pulses.activity( modified_since, limit, page, callback ); ```
 -- *modified_since*: datetime *optional*
 -- *limit*: number *optional*
 -- *page*: number *optional*
 -- *callback*: function (error, response) *required*
 
 - Create
-```javascript otxapi.pulses.create( pulse, callback ); ```
+``` otxapi.pulses.create( pulse, callback ); ```
 -- *pulse*: object (refer to https://otx.alienvault.com/api/) *required*
 --- name (string, required) name for new pulse
 --- description (string) a brief description of the pulse, the threat it addresses.
@@ -100,49 +100,49 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 -- *callback*: function (error, response) *required*
 
 - Details
-```javascript otxapi.pulses.details( id, callback ); ```
+``` otxapi.pulses.details( id, callback ); ```
 -- *id*: string *required*
 -- *callback*: function (error, response) *required*
 
 - Events
-```javascript otxapi.pulses.events( modified_since, limit, page, callback ); ```
+``` otxapi.pulses.events( modified_since, limit, page, callback ); ```
 -- *modified_since*: datetime *optional*
 -- *limit*: number *optional*
 -- *page*: number *optional*
 -- *callback*: function (error, response) *required*
 
 - Indicators
-```javascript otxapi.pulses.indicators( id, limit, page, callback ); ```
+``` otxapi.pulses.indicators( id, limit, page, callback ); ```
 -- *id*: string (pulse identifier) *required*
 -- *limit*: number *optional*
 -- *page*: number *optional*
 -- *callback*: function (error, response) *required*
 
 - Indicators Types
-```javascript otxapi.pulses.indicatorsTypes( callback ); ```
+``` otxapi.pulses.indicatorsTypes( callback ); ```
 -- *callback*: function (error, response) *required*
 
 - Indicators Validate
-```javascript otxapi.pulses.indicatorsValidate( indicator, type, description, callback ); ```
+``` otxapi.pulses.indicatorsValidate( indicator, type, description, callback ); ```
 -- *indicator*: string *required*
 -- *type*: string *required*
 -- *description*: string *optional*
 -- *callback*: function (error, response) *required*
 
 - Related
-```javascript otxapi.pulses.related( id, callback ); ```
+``` otxapi.pulses.related( id, callback ); ```
 -- *id*: string *required*
 -- *callback*: function (error, response) *required*
 
 - Subscribed
-```javascript otxapi.pulses.subscribed( modified_since, limit, page, callback ); ```
+``` otxapi.pulses.subscribed( modified_since, limit, page, callback ); ```
 -- *modified_since*: datetime *optional*
 -- *limit*: number *optional*
 -- *page*: number *optional*
 -- *callback*: function (error, response) *required*
 
 - User
-```javascript otxapi.pulses.user( username, callback ); ```
+``` otxapi.pulses.user( username, callback ); ```
 -- *username*: string *required*
 -- *callback*: function (error, response) *required*
 
@@ -151,14 +151,14 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 Refer to https://otx.alienvault.com/api/ API Docs for parameter options and response examples.
 
 - Pulses
-```javascript otxapi.search.pulses(query, limit, page, callback ); ```
+``` otxapi.search.pulses(query, limit, page, callback ); ```
 -- *query*: string *required*
 -- *limit*: string *optional*
 -- *page*: string *optional*
 -- *callback*: function (error, response) *required*
 
 - Users
-```javascript otxapi.search.users(query, limit, page, callback ); ```
+``` otxapi.search.users(query, limit, page, callback ); ```
 -- *query*: string *required*
 -- *limit*: string *optional*
 -- *page*: string *optional*
@@ -169,30 +169,30 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 Refer to https://otx.alienvault.com/api/ API Docs for parameter options and response examples.
 
 - Me
-```javascript otxapi.users.me( callback ); ```
+``` otxapi.users.me( callback ); ```
 -- *callback*: function (error, response) *required*
 
 - Action
-```javascript otxapi.users.action( username, callback ); ```
+``` otxapi.users.action( username, callback ); ```
 -- *username*: string *required*
 -- *callback*: function (error, response) *required*
 
 - Follow
-```javascript otxapi.users.follow( username, callback ); ```
+``` otxapi.users.follow( username, callback ); ```
 -- *username*: string *required*
 -- *callback*: function (error, response) *required*
 
 - Unfollow
-```javascript otxapi.users.unfollow( username, callback ); ```
+``` otxapi.users.unfollow( username, callback ); ```
 -- *username*: string *required*
 -- *callback*: function (error, response) *required*
 
 - Subscribe
-```javascript otxapi.users.subscribe( username, callback ); ```
+``` otxapi.users.subscribe( username, callback ); ```
 -- *username*: string *required*
 -- *callback*: function (error, response) *required*
 
 - Unsubscribe
-```javascript otxapi.users.unsubscribe( username, callback ); ```
+``` otxapi.users.unsubscribe( username, callback ); ```
 -- *username*: string *required*
 -- *callback*: function (error, response) *required*
