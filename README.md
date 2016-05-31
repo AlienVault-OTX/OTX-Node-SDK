@@ -24,24 +24,89 @@ OTX-Node-SDK will soon be added to npm. Until then follow the instructions below
 ### Usage Docs
 All functions require a callback.
 
+
+#### Indicators
+
+- IPv4
+``` otxapi.indicators.ipv4( ipv4, section, callback ); ```
+
+- IPv6
+``` otxapi.indicators.ipv6( ipv6, section, callback ); ```
+
+- Domain
+``` otxapi.indicators.domain( domain, section, callback ); ```
+
+- Hostname
+``` otxapi.indicators.hostname( hostname, section, callback ); ```
+
+- File
+``` otxapi.indicators.file( file, section, callback ); ```
+
+- URL
+``` otxapi.indicators.url( url, section, callback ); ```
+
+- CVE
+``` otxapi.indicators.cve( cve, section, callback ); ```
+
+
+#### Pulses
+
+- Activity
+``` otxapi.pulses.activity( ```
+
+- Create
+``` otxapi.pulses.create( ```
+
+- Details
+``` otxapi.pulses.details( ```
+
+- Events
+``` otxapi.pulses.events( ```
+
+- Indicators
+``` otxapi.pulses.( ```
+
+- Indicators Types
+``` otxapi.pulses.indicatorsTypes( ```
+
+- Indicators Validate
+``` otxapi.pulses.indicatorsValidate( ```
+
+- Related
+``` otxapi.pulses.related( ```
+
+- Subscribed
+``` otxapi.pulses.subscribed( ```
+
+- User
+``` otxapi.pulses.user( ```
+
+
 #### Search
-Search module includes searching: Pulses and Users.
-##### Pulses
-``` otxapi.search.pulses(query, limit, page, callback ); ```
 
-Name  | Type | Required | Description
-------------- | -------------
-query  | string | Yes | search query
-limit  | number | No | limit number per page
-page  | number | No | current page number
-callback  | function | Yes | Callback function with params error and response: `callback(error, response)`
+- Pulses
+``` otxapi.search.pulses(query, li mit, page, callback ); ```
 
-##### Users
-``` otxapi.search.users(query, limit, page, callback ); ```
+- Users
+``` otxapi.search.users(query, lim it, page, callback ); ```
 
-Name  | Type | Required | Description
-------------- | -------------
-query  | string | Yes | search query
-limit  | number | No | limit number per page
-page  | number | No | current page number
-callback  | function | Yes | Callback function with params error and response: `callback(error, response)`
+
+#### Users
+
+- Me
+``` otxapi.users.me( callback ); ```
+
+- Action
+``` otxapi.users.action( username, callback ); ```
+
+- Follow
+``` otxapi.users.follow( username, callback ); ```
+
+- Unfollow
+``` otxapi.users.unfollow( username, callback ); ```
+
+- Subscribe
+``` otxapi.users.subscribe( username, callback ); ```
+
+- Unsubscribe
+``` otxapi.users.unsubscribe( username, callback ); ```
