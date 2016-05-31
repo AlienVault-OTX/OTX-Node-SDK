@@ -16,9 +16,13 @@ OTX-Node-SDK will soon be added to npm. Until then follow the instructions below
 1. Register at https://otx.alienvault.com/ and obtain your DirectConnect OTX Key found on https://otx.alienvault.com/api/
 2. clone this repo
 3. Require 'otx-node-sdk/index.js' in your file
-``` var otxNodeSdk = require('otx-node-sdk/index.js'); ```
+``` 
+var otxNodeSdk = require('otx-node-sdk/index.js'); 
+```
 4. Initialize with your OTX API KEY
-``` var otxapi = new otxNodeSdk('<OTX_API_KEY>'); ```
+``` 
+var otxapi = new otxNodeSdk('<OTX_API_KEY>'); 
+```
 5. Have Fun!
 
 ### Usage Docs
@@ -28,85 +32,135 @@ All functions require a callback.
 #### Indicators
 
 - IPv4
-``` otxapi.indicators.ipv4( ipv4, section, callback ); ```
+``` 
+otxapi.indicators.ipv4( ipv4, section, callback ); 
+```
 
 - IPv6
-``` otxapi.indicators.ipv6( ipv6, section, callback ); ```
+``` 
+otxapi.indicators.ipv6( ipv6, section, callback ); 
+```
 
 - Domain
-``` otxapi.indicators.domain( domain, section, callback ); ```
+``` 
+otxapi.indicators.domain( domain, section, callback ); 
+```
 
 - Hostname
-``` otxapi.indicators.hostname( hostname, section, callback ); ```
+``` 
+otxapi.indicators.hostname( hostname, section, callback ); 
+```
 
 - File
-``` otxapi.indicators.file( file, section, callback ); ```
+``` 
+otxapi.indicators.file( file, section, callback ); 
+```
 
 - URL
-``` otxapi.indicators.url( url, section, callback ); ```
+``` 
+otxapi.indicators.url( url, section, callback ); 
+```
 
 - CVE
-``` otxapi.indicators.cve( cve, section, callback ); ```
+``` 
+otxapi.indicators.cve( cve, section, callback ); 
+```
 
 
 #### Pulses
 
 - Activity
-``` otxapi.pulses.activity( ```
+``` 
+otxapi.pulses.activity( 
+```
 
 - Create
-``` otxapi.pulses.create( ```
+``` 
+otxapi.pulses.create( 
+```
 
 - Details
-``` otxapi.pulses.details( ```
+``` 
+otxapi.pulses.details( 
+```
 
 - Events
-``` otxapi.pulses.events( ```
+``` 
+otxapi.pulses.events( 
+```
 
 - Indicators
-``` otxapi.pulses.( ```
+``` 
+otxapi.pulses.( 
+```
 
 - Indicators Types
-``` otxapi.pulses.indicatorsTypes( ```
+``` 
+otxapi.pulses.indicatorsTypes( 
+```
 
 - Indicators Validate
-``` otxapi.pulses.indicatorsValidate( ```
+``` 
+otxapi.pulses.indicatorsValidate( 
+```
 
 - Related
-``` otxapi.pulses.related( ```
+``` 
+otxapi.pulses.related( 
+```
 
 - Subscribed
-``` otxapi.pulses.subscribed( ```
+``` 
+otxapi.pulses.subscribed( 
+```
 
 - User
-``` otxapi.pulses.user( ```
+``` 
+otxapi.pulses.user( 
+```
 
 
 #### Search
 
 - Pulses
-``` otxapi.search.pulses(query, li mit, page, callback ); ```
+``` 
+otxapi.search.pulses(query, li mit, page, callback ); 
+```
 
 - Users
-``` otxapi.search.users(query, lim it, page, callback ); ```
+``` 
+otxapi.search.users(query, lim it, page, callback ); 
+```
 
 
 #### Users
 
 - Me
-``` otxapi.users.me( callback ); ```
+``` 
+otxapi.users.me( callback ); 
+```
 
 - Action
-``` otxapi.users.action( username, callback ); ```
+``` 
+otxapi.users.action( username, callback ); 
+```
 
 - Follow
-``` otxapi.users.follow( username, callback ); ```
+``` 
+otxapi.users.follow( username, callback ); 
+```
 
 - Unfollow
-``` otxapi.users.unfollow( username, callback ); ```
+``` 
+otxapi.users.unfollow( username, callback ); 
+```
 
 - Subscribe
-``` otxapi.users.subscribe( username, callback ); ```
+``` 
+otxapi.users.subscribe( username, callback ); 
+```
 
 - Unsubscribe
-``` otxapi.users.unsubscribe( username, callback ); ```
+``` 
+otxapi.users.unsubscribe( username, callback ); 
+```
