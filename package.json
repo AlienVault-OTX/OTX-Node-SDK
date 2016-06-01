@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Node.js SDK for AlienVault OTX API",
   "main": "index.js",
-  "author": "Nathan Biles",
+  "author": "Nathan Biles <nbiles@alienvault.com>",
   "keywords": [
     "AlienVault",
-    "OTX"
+    "otx"
   ],
   "repository": {
     "type": "git",
