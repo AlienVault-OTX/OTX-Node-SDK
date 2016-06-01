@@ -15,17 +15,17 @@ OTX DirectConnect provides a mechanism to automatically pull indicators of compr
 ## Installation and Usage
 OTX-Node-SDK will soon be added to npm. Until then follow the instructions below:
 
-1. Register at https://otx.alienvault.com/ and obtain your DirectConnect OTX Key found on https://otx.alienvault.com/api/
-2. clone this repo
-3. Require 'otx-node-sdk/index.js' in your file
+* Register at https://otx.alienvault.com/ and obtain your DirectConnect OTX Key found on https://otx.alienvault.com/api/
+* clone this repo
+* Require 'otx-node-sdk/index.js' in your file 
 ```javascript
 var otxNodeSdk = require('otx-node-sdk/index.js'); 
 ```
-4. Initialize with your OTX API KEY
-```javascript
+* Initialize with your OTX API KEY 
+```javascript 
 var otxapi = new otxNodeSdk('<OTX_API_KEY>'); 
 ```
-5. Have Fun!
+* Have Fun!
 
 ### Usage Docs
 All functions require a callback.
