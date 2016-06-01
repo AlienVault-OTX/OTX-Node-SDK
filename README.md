@@ -34,165 +34,165 @@ All functions require a callback.
 #### Indicators
 Refer to https://otx.alienvault.com/api/ API Docs for parameter options and response examples.
 
-- IPv4
+* IPv4
 ``` otxapi.indicators.ipv4( ipv4, section, callback ); ```
-..- *ipv4*: string *required*
-..- *section*: string *required*
-..- *callback*: function (error, response) *required*
+..* *ipv4*: string *required*
+..* *section*: string *required*
+..* *callback*: function (error, response) *required*
 
-- IPv6
+* IPv6
 ``` otxapi.indicators.ipv6( ipv6, section, callback ); ```
-..- *ipv6*: string *required*
-..- *section*: string *required*
-..- *callback*: function (error, response) *required*
+..* *ipv6*: string *required*
+..* *section*: string *required*
+..* *callback*: function (error, response) *required*
 
-- Domain
+* Domain
 ``` otxapi.indicators.domain( domain, section, callback ); ```
-..- *domain*: string *required*
-..- *section*: string *required*
-..- *callback*: function (error, response) *required*
+..* *domain*: string *required*
+..* *section*: string *required*
+..* *callback*: function (error, response) *required*
 
-- Hostname
+* Hostname
 ``` otxapi.indicators.hostname( hostname, section, callback ); ```
-..- *hostname*: string *required*
-..- *section*: string *required*
-..- *callback*: function (error, response) *required*
+..* *hostname*: string *required*
+..* *section*: string *required*
+..* *callback*: function (error, response) *required*
 
-- File
+* File
 ``` otxapi.indicators.file( file, section, callback ); ```
-..- *file*: string *required*
-..- *section*: string *required*
-..- *callback*: function (error, response) *required*
+..* *file*: string *required*
+..* *section*: string *required*
+..* *callback*: function (error, response) *required*
 
-- URL
+* URL
 ``` otxapi.indicators.url( url, section, callback ); ```
-..- *url*: string *required*
-..- *section*: string *required*
-..- *callback*: function (error, response) *required*
+..* *url*: string *required*
+..* *section*: string *required*
+..* *callback*: function (error, response) *required*
 
-- CVE
+* CVE
 ``` otxapi.indicators.cve( cve, section, callback ); ```
-..- *cve*: string *required*
-..- *section*: string *required*
-..- *callback*: function (error, response) *required*
+..* *cve*: string *required*
+..* *section*: string *required*
+..* *callback*: function (error, response) *required*
 
 
 #### Pulses
 Refer to https://otx.alienvault.com/api/ API Docs for parameter options and response examples.
 
-- Activity
+* Activity
 ``` otxapi.pulses.activity( modified_since, limit, page, callback ); ```
-..- *modified_since*: datetime *optional*
-..- *limit*: number *optional*
-..- *page*: number *optional*
-..- *callback*: function (error, response) *required*
+..* *modified_since*: datetime *optional*
+..* *limit*: number *optional*
+..* *page*: number *optional*
+..* *callback*: function (error, response) *required*
 
-- Create
+* Create
 ``` otxapi.pulses.create( pulse, callback ); ```
-..- *pulse*: object (refer to https://otx.alienvault.com/api/) *required*
-...- name (string, required) name for new pulse
-...- description (string) a brief description of the pulse, the threat it addresses.
-...- public (boolean, required) Public implies other users can see / subscribe to your pulse.
-...- TLP (string) One of: 'white', 'green', 'amber', 'red'. Default is green. Amber and red pulses MUST be private.
-...- indicators (list of objects) List of objects (dicts): {type: 'email', indicator: 'badguy@malware.com', description: ''}. Every object in the list must contain these three fields.
-...- tags (list of strings) Tags to describe your pulse. i.e. malware, phishing, hacking.team,...
-...- references (list of strings) External references to associate with this pulse
-..- *callback*: function (error, response) *required*
+..* *pulse*: object (refer to https://otx.alienvault.com/api/) *required*
+...* name (string, required) name for new pulse
+...* description (string) a brief description of the pulse, the threat it addresses.
+...* public (boolean, required) Public implies other users can see / subscribe to your pulse.
+...* TLP (string) One of: 'white', 'green', 'amber', 'red'. Default is green. Amber and red pulses MUST be private.
+...* indicators (list of objects) List of objects (dicts): {type: 'email', indicator: 'badguy@malware.com', description: ''}. Every object in the list must contain these three fields.
+...* tags (list of strings) Tags to describe your pulse. i.e. malware, phishing, hacking.team,...
+...* references (list of strings) External references to associate with this pulse
+..* *callback*: function (error, response) *required*
 
-- Details
+* Details
 ``` otxapi.pulses.details( id, callback ); ```
-..- *id*: string *required*
-..- *callback*: function (error, response) *required*
+..* *id*: string *required*
+..* *callback*: function (error, response) *required*
 
-- Events
+* Events
 ``` otxapi.pulses.events( modified_since, limit, page, callback ); ```
-..- *modified_since*: datetime *optional*
-..- *limit*: number *optional*
-..- *page*: number *optional*
-..- *callback*: function (error, response) *required*
+..* *modified_since*: datetime *optional*
+..* *limit*: number *optional*
+..* *page*: number *optional*
+..* *callback*: function (error, response) *required*
 
-- Indicators
+* Indicators
 ``` otxapi.pulses.indicators( id, limit, page, callback ); ```
-..- *id*: string (pulse identifier) *required*
-..- *limit*: number *optional*
-..- *page*: number *optional*
-..- *callback*: function (error, response) *required*
+..* *id*: string (pulse identifier) *required*
+..* *limit*: number *optional*
+..* *page*: number *optional*
+..* *callback*: function (error, response) *required*
 
-- Indicators Types
+* Indicators Types
 ``` otxapi.pulses.indicatorsTypes( callback ); ```
-..- *callback*: function (error, response) *required*
+..* *callback*: function (error, response) *required*
 
-- Indicators Validate
+* Indicators Validate
 ``` otxapi.pulses.indicatorsValidate( indicator, type, description, callback ); ```
-..- *indicator*: string *required*
-..- *type*: string *required*
-..- *description*: string *optional*
-..- *callback*: function (error, response) *required*
+..* *indicator*: string *required*
+..* *type*: string *required*
+..* *description*: string *optional*
+..* *callback*: function (error, response) *required*
 
-- Related
+* Related
 ``` otxapi.pulses.related( id, callback ); ```
-..- *id*: string *required*
-..- *callback*: function (error, response) *required*
+..* *id*: string *required*
+..* *callback*: function (error, response) *required*
 
-- Subscribed
+* Subscribed
 ``` otxapi.pulses.subscribed( modified_since, limit, page, callback ); ```
-..- *modified_since*: datetime *optional*
-..- *limit*: number *optional*
-..- *page*: number *optional*
-..- *callback*: function (error, response) *required*
+..* *modified_since*: datetime *optional*
+..* *limit*: number *optional*
+..* *page*: number *optional*
+..* *callback*: function (error, response) *required*
 
-- User
+* User
 ``` otxapi.pulses.user( username, callback ); ```
-..- *username*: string *required*
-..- *callback*: function (error, response) *required*
+..* *username*: string *required*
+..* *callback*: function (error, response) *required*
 
 
 #### Search
 Refer to https://otx.alienvault.com/api/ API Docs for parameter options and response examples.
 
-- Pulses
+* Pulses
 ``` otxapi.search.pulses(query, limit, page, callback ); ```
-..- *query*: string *required*
-..- *limit*: string *optional*
-..- *page*: string *optional*
-..- *callback*: function (error, response) *required*
+..* *query*: string *required*
+..* *limit*: string *optional*
+..* *page*: string *optional*
+..* *callback*: function (error, response) *required*
 
-- Users
+* Users
 ``` otxapi.search.users(query, limit, page, callback ); ```
-..- *query*: string *required*
-..- *limit*: string *optional*
-..- *page*: string *optional*
-..- *callback*: function (error, response) *required*
+..* *query*: string *required*
+..* *limit*: string *optional*
+..* *page*: string *optional*
+..* *callback*: function (error, response) *required*
 
 
 #### Users
 Refer to https://otx.alienvault.com/api/ API Docs for parameter options and response examples.
 
-- Me
+* Me
 ``` otxapi.users.me( callback ); ```
-..- *callback*: function (error, response) *required*
+..* *callback*: function (error, response) *required*
 
-- Action
+* Action
 ``` otxapi.users.action( username, callback ); ```
-..- *username*: string *required*
-..- *callback*: function (error, response) *required*
+..* *username*: string *required*
+..* *callback*: function (error, response) *required*
 
-- Follow
+* Follow
 ``` otxapi.users.follow( username, callback ); ```
-..- *username*: string *required*
-..- *callback*: function (error, response) *required*
+..* *username*: string *required*
+..* *callback*: function (error, response) *required*
 
-- Unfollow
+* Unfollow
 ``` otxapi.users.unfollow( username, callback ); ```
-..- *username*: string *required*
-..- *callback*: function (error, response) *required*
+..* *username*: string *required*
+..* *callback*: function (error, response) *required*
 
-- Subscribe
+* Subscribe
 ``` otxapi.users.subscribe( username, callback ); ```
-..- *username*: string *required*
-..- *callback*: function (error, response) *required*
+..* *username*: string *required*
+..* *callback*: function (error, response) *required*
 
-- Unsubscribe
+* Unsubscribe
 ``` otxapi.users.unsubscribe( username, callback ); ```
-..- *username*: string *required*
-..- *callback*: function (error, response) *required*
+..* *username*: string *required*
+..* *callback*: function (error, response) *required*
