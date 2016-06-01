@@ -36,42 +36,56 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * IPv4
 ``` otxapi.indicators.ipv4( ipv4, section, callback ); ```
+
+
 ..* *ipv4*: string *required*
 ..* *section*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * IPv6
 ``` otxapi.indicators.ipv6( ipv6, section, callback ); ```
+
+
 ..* *ipv6*: string *required*
 ..* *section*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * Domain
 ``` otxapi.indicators.domain( domain, section, callback ); ```
+
+
 ..* *domain*: string *required*
 ..* *section*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * Hostname
 ``` otxapi.indicators.hostname( hostname, section, callback ); ```
+
+
 ..* *hostname*: string *required*
 ..* *section*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * File
 ``` otxapi.indicators.file( file, section, callback ); ```
+
+
 ..* *file*: string *required*
 ..* *section*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * URL
 ``` otxapi.indicators.url( url, section, callback ); ```
+
+
 ..* *url*: string *required*
 ..* *section*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * CVE
 ``` otxapi.indicators.cve( cve, section, callback ); ```
+
+
 ..* *cve*: string *required*
 ..* *section*: string *required*
 ..* *callback*: function (error, response) *required*
@@ -82,6 +96,8 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * Activity
 ``` otxapi.pulses.activity( modified_since, limit, page, callback ); ```
+
+
 ..* *modified_since*: datetime *optional*
 ..* *limit*: number *optional*
 ..* *page*: number *optional*
@@ -89,6 +105,8 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * Create
 ``` otxapi.pulses.create( pulse, callback ); ```
+
+
 ..* *pulse*: object (refer to https://otx.alienvault.com/api/) *required*
 ...* name (string, required) name for new pulse
 ...* description (string) a brief description of the pulse, the threat it addresses.
@@ -101,11 +119,15 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * Details
 ``` otxapi.pulses.details( id, callback ); ```
+
+
 ..* *id*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * Events
 ``` otxapi.pulses.events( modified_since, limit, page, callback ); ```
+
+
 ..* *modified_since*: datetime *optional*
 ..* *limit*: number *optional*
 ..* *page*: number *optional*
@@ -113,6 +135,8 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * Indicators
 ``` otxapi.pulses.indicators( id, limit, page, callback ); ```
+
+
 ..* *id*: string (pulse identifier) *required*
 ..* *limit*: number *optional*
 ..* *page*: number *optional*
@@ -120,10 +144,14 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * Indicators Types
 ``` otxapi.pulses.indicatorsTypes( callback ); ```
+
+
 ..* *callback*: function (error, response) *required*
 
 * Indicators Validate
 ``` otxapi.pulses.indicatorsValidate( indicator, type, description, callback ); ```
+
+
 ..* *indicator*: string *required*
 ..* *type*: string *required*
 ..* *description*: string *optional*
@@ -131,11 +159,15 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * Related
 ``` otxapi.pulses.related( id, callback ); ```
+
+
 ..* *id*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * Subscribed
 ``` otxapi.pulses.subscribed( modified_since, limit, page, callback ); ```
+
+
 ..* *modified_since*: datetime *optional*
 ..* *limit*: number *optional*
 ..* *page*: number *optional*
@@ -143,6 +175,8 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * User
 ``` otxapi.pulses.user( username, callback ); ```
+
+
 ..* *username*: string *required*
 ..* *callback*: function (error, response) *required*
 
@@ -152,6 +186,8 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * Pulses
 ``` otxapi.search.pulses(query, limit, page, callback ); ```
+
+
 ..* *query*: string *required*
 ..* *limit*: string *optional*
 ..* *page*: string *optional*
@@ -159,6 +195,8 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * Users
 ``` otxapi.search.users(query, limit, page, callback ); ```
+
+
 ..* *query*: string *required*
 ..* *limit*: string *optional*
 ..* *page*: string *optional*
@@ -170,29 +208,41 @@ Refer to https://otx.alienvault.com/api/ API Docs for parameter options and resp
 
 * Me
 ``` otxapi.users.me( callback ); ```
+
+
 ..* *callback*: function (error, response) *required*
 
 * Action
 ``` otxapi.users.action( username, callback ); ```
+
+
 ..* *username*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * Follow
 ``` otxapi.users.follow( username, callback ); ```
+
+
 ..* *username*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * Unfollow
 ``` otxapi.users.unfollow( username, callback ); ```
+
+
 ..* *username*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * Subscribe
 ``` otxapi.users.subscribe( username, callback ); ```
+
+
 ..* *username*: string *required*
 ..* *callback*: function (error, response) *required*
 
 * Unsubscribe
 ``` otxapi.users.unsubscribe( username, callback ); ```
+
+
 ..* *username*: string *required*
 ..* *callback*: function (error, response) *required*
